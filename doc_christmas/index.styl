@@ -1,0 +1,178 @@
+@import "../lib/reset.styl";
+body,html
+  width 100%
+  height 100%
+  background:#caf4ef
+  overflow hidden
+#all
+  width 100%
+  height 100%
+#header
+  width 100%
+  height long(708)
+  overflow hidden
+  fontsize(36)
+  background url("img/Bitmap01.png")
+  background-repeat no-repeat
+  background-position-y: long(- 30)
+  position: relative
+  #logo
+    width long(88)
+    height long(83)
+    margin-left long(14)
+  #word
+    width 100%
+    margin 0 auto
+    position absolute
+    top:long(151)
+    fontsize(36)
+    color:#fff
+    p
+      width 100%
+      height long(50)
+      margin 0 auto;
+      text-align center;
+
+#content
+  width 100%
+  height 50%
+
+  #titl
+    .middle
+      fontsize(32)
+      width long(604)
+      height long(54)
+      line-height long(54)
+      color #fff
+      margin 0 auto
+
+      background url("img/Group 4.png")
+    p
+      text-align center
+    .care
+      margin-top long(6)
+      fontsize(28)
+      color:#357366
+  #text
+    width long(686)
+    height long(274)
+    border-radius 10px
+    background rgba(109, 206, 196, 0.5)
+    margin long(8) auto 0
+    position relative
+    label
+      width long(316)
+      height long(48)
+      margin-top long(15)
+      margin-left long(16)
+      margin-bottom long(13)
+      float left
+      background #6DCEC4
+      border-radius long(26)
+      fontsize(28)
+      color #fff
+      text-align center
+      line-height long(48)
+      position relative
+      &:nth-child(2)
+        margin-left long(22)
+
+    button
+      display block
+      width long(362)
+      height long(78)
+      margin long(10) auto
+      color #fff
+      border-radius 10px
+      background #357366
+      border-color #fff
+      fontsize(32)
+      line-height long(78)
+      border-color transparent
+    textarea
+      width long(608)
+      height long(171)
+      margin-left long(16)
+      border-radius long(10)
+      margin-bottom  long(18)
+      fontsize(32)
+      border-color transparent
+      padding-left long(23)
+      padding-right long(23)
+      padding-top long(9)
+      text-indent long(192)
+#isName
+  display block
+  fontsize(32)
+  color #dddddd
+  position absolute
+  top:long(85)
+  left:long(55)
+#allCont
+  text-align right
+  width long(64)
+  height long(30)
+  fontsize(22)
+  color #bbb
+  position absolute
+  bottom long(12)
+  right long(39)
+#one,#two
+  width long(36)
+  height long(36)
+  background #fff
+  border-radius 50%
+  position absolute
+  top long(6)
+  left: long(7)
+#twoSelect,#oneSelect
+  display block
+  width long(24)
+  height long(24)
+  border-radius 50%
+  position absolute
+  top: long(12)
+  left long(13)
+  background #fff
+#oneSelect
+  background #357366
+input:focus
+  outline none
+#contentOver, #contentSend
+  display none
+  #titlSend, #titlOver
+    margin-top long(60)
+    .middle
+      fontsize(32)
+      width long(604)
+      height long(54)
+      line-height long(54)
+      color #fff
+      margin 0 auto
+      background url("img/Group 4.png")
+    p
+      text-align center
+
+
+#titlOver
+  img
+    display block
+    margin long(50) auto
+#titlSend
+
+  .end
+    width long(686)
+    height long(231)
+    margin 0 auto
+    margin-top long(40)
+    background url("img/Group 3.png")
+  span
+    display block
+    width long(608)
+    height long(90)
+    padding-top long(68)
+    margin-left long(43)
+    fontsize(32)
+    text-align left
+
+

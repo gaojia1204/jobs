@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+//页面部分
+$body_background:#5E0001;  //body背景色
+
+$loading_background:#fff;	//loading的背景色
+$loading_img_width:300px;   //loading的logo宽度
+
+$eggs_li_width:33.3%;   //金蛋的占比
+
+$listcontent_width:90%;    //每个模块的宽度
+$listcontent_background:#CC1A1A;  //list板块的颜色
+$listcontent_padding_bottom:3%;  //list板块底部内边距
+$listcontent_margin_top:10px;   //list板块top外边距
+$listcontent_title_height:40px;    //title的高度
+$listcontent_title_div_width:100px;   //titlediv 的宽度
+$listcontent_title_color_1:#F9DBA1;   //title 字体渐变色1
+$listcontent_title_color_2:#D0AB71;   //title 字体渐变色2
+$listcontent_line_1px_backgound:#F83131;    //一条线的字体颜色
+$listcontent_line_1px_width:94%;   //一条线的字体颜色width
+$listcontent_insert_Span_height:6px;   //类似邮箱的那种高度
+$listcontent_insert_Span_backgound:#6F0D05;   //类似邮箱的那种背景色
+$listcontent_insert_Span_shadow_backgound:#9D130F;   //类似邮箱的那种boxshadow颜色
+$listcontent_paiming_width:82%;   //排名的宽度
+$listcontent_paiming_height:190px;   //排名的高度
+$listcontent_paiming_color_1:#D19D69;   //排名的阴影背景色
+$listcontent_paiming_color_2:#FFF9D9;	//排名的主背景色
+$listcontent_span_width1_list_Time:23%;   //span1 的宽度比例
+$listcontent_span_width2_list_Name:33%;	//span1 的宽度比例
+$listcontent_span_width3_list_Things:40%;	//span1 的宽度比例
+$listcontent_bg_Dashed:'../images/line-bg.jpg';   //虚线背景
+
+$listcontent_rules_width:82%;   //游戏规则的宽度
+$listcontent_rules_padding:10% 4%;   //游戏的padding
+
+$listcontent_footer_margin_top:-30px;   //footer 的外边距高度
+
+//字体
+$YaHei: 'Microsoft YaHei';  //微软雅黑字体
+
+//窗口部分
+$mask_z_index:10000;   //背景的层级
+$mask_z_index_background:rgba(0,0,0,.7);    //背景的颜色
+//
+$alert_width:360px;    //弹出窗口的宽度
+$alert_height:300px;    //弹出窗口的高度
+$alert_border_radius:4px;   //弹窗的圆角
+
+$alert_login_titleheight:50px;   //登录提示的高
+$alert_login_username_div_width:84%;   //登录用户名手机号宽度
+$alert_login_username_div_height:40px;   //登录用户名手机号高度
+$alert_login_username_top:85px;   //登录用户名name top
+$alert_login_phone_top:145px;   //登录用户名手机号top
+$alert_login_label_width:20%;  ////登录用户名 手机号width
+$alert_login_label_padding_right:4%;  //登录用户名 手机号padding-right
+$alert_login_input_width:76%;   //登录用户名 手机号 输入框 width
+$alert_login_input_height:32px;   //登录用户名 手机号 输入框 height
+$alert_login_input_border_bottom_color:#fff;   //登录用户名 手机号 输入框 border-bootom颜色
+$alert_login_submit_height:36px;    //登录提交按钮高度
+$alert_login_submit_bottom:32px;   //登录提交按钮bootom
+
+$alert_jindan_width:48%;   //金蛋的宽
+$alert_caidai_width:100px;   //彩带的宽度
+$alert_gongxi_top:-30%;   //恭喜提示的top值
+$alert_gongxi_height:200px;   //恭喜提示的高
+$alert_gongxi_img_jiangping_left:52%;   //奖品的left
+$alert_gongxi_img_jiangping_top:20%;   //奖品的高
+$alert_gongxi_img_jiangping_height:180px;   //奖品的图片
+
+$alert_btn_get_width:80%;    //领取奖品按钮宽度
+$alert_btn_get_height:40px;    //领取奖品按钮高度
+$alert_btn_get_background_color:#33D92A;   //领取奖品按钮颜色
+$alert_btn_get_background_hover_color:#24A91D;    //领取奖品按钮hover颜色
+$alert_btn_get_bottom:20px;		//领取奖品按钮bottom
+$alert_colse_width:28px;     //关闭按钮颜色
+$alert_colse_position:10px;    //关闭按钮right top

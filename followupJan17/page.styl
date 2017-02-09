@@ -1,0 +1,560 @@
+@import "../lib/reset.styl";
+
+.wrapper
+	background #FFFFA7
+	width:100%;
+	overflow: hidden;
+	position:relative
+.slogan
+	width:100%;
+	height long(273);
+	background url("./img/title.png") center
+	background-repeat no-repeat
+	background-size long(750) long(273)
+#into
+	visibility hidden
+	width 100%
+	height long(60);
+	background-color  #FBFB8E
+	text-align center
+	line-height long(60)
+	fontsize(28)
+	color #DD2736
+	font-family: PingFangSC-Regular
+	span
+		color #288EFF
+.chance
+	overflow: hidden;
+	margin:long(33) 0;
+	.income
+		float:right;
+		margin-left:0;
+		margin-right:long(44);
+
+	.title
+		fontsize(24)
+		line-height:long(64)
+		text-align:center;
+		width long(320)
+		height long(62)
+		border-radius: long(78);
+		font-family: PingFangSC-Regular;
+		border 2px solid #288EFF
+		color: #288EFF;
+	.awards
+		margin-left:long(45);
+		float left
+
+.surplus
+	width long(360)
+	height long(79)
+	margin long(34) auto
+	margin-bottom long(16)
+	text-align center
+	background url("./img/Rectangle.png") center no-repeat
+	background-size long(360) long(79)
+	fontsize(28)
+	font-family: PingFangSC-Regular;
+	color: #9B050F;
+	letter-spacing: long(0.87);
+	line-height long(58)
+	span
+		color: #288EFF;
+
+.lottery
+	width:long(594)
+	height:long(636)
+	margin:0 auto;
+	position:relative;
+	background-size:100%
+	z-index 2
+.carousel
+	margin 0 auto
+	width:long(594);
+	height:long(594);
+	display:block;
+	-webkit-transition: transform;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-webkit-transform: rotate(0deg);
+	background:url('./img/lottery.png') no-repeat
+	background-size:contain
+.pointer
+	position:absolute
+	width:long(162)
+	height:long(188)
+	left:50%;
+	top:50%;
+	margin-top (-19%)
+	margin-left long(-81)
+	background:url('./img/point.png') no-repeat
+	background-size:contain;	
+	
+.shadow
+	margin:long(25) auto;
+	width:long(300)
+	height:.1rem
+	background:rgba(0, 0, 0, 0.1)
+	border-radius:100%;
+	box-shadow 0 0 0.1rem 0.08rem rgba(0, 0, 0, 0.1)
+
+#cont
+	width 100%
+	height long(62)
+	overflow hidden
+	color #fff
+	margin-top long(18)
+#rule
+	display block
+	fontsize(28)
+	line-height:long(64)
+	text-align:center;
+	width long(320)
+	height long(62)
+	border-radius: long(78);
+	font-family: PingFangSC-Regular;
+	float left
+	background #E81D1E
+	margin-left long(45)
+#moreChance
+	display block
+	fontsize(28)
+	line-height:long(64)
+	text-align:center;
+	width long(320)
+	height long(62)
+	border-radius: long(78);
+	font-family: PingFangSC-Regular;
+	float right
+	margin-right long(44)
+	background #288EFF
+
+.grassbox
+	border-radius:long(8)
+	margin:long(39) longP(48) long(24);
+	position:relative;
+	display:inline-block;
+	width:longP(654)
+	height long(364)
+	background: #FFC81B;
+
+.grassbox-content
+	overflow:hidden
+
+.grassboxall-title
+	height:long(94)
+	line-height:@height
+	border-bottom:long(2) solid #FEFEA6;
+	fontsize(32)
+	font-family:PingFangSC-Medium;
+	text-align:center;
+	color: #99020F;
+
+.progress-step
+	margin:0 disP(15,654)
+	position:relative
+
+
+.range_box
+	margin:long(30) 0 long(80)
+
+#range
+	margin:0 0 long(17) long(34)
+	width:100%
+	height:long(33)
+	line-height:@height
+	span
+		float:left;
+		display:inline-block;
+		font-family: PingFangSC-Regular;
+		color: #A31510;
+		fontsize(18)
+		width:long(24)
+		height long(25)
+	span:nth-child(2),span:nth-child(3),span:nth-child(4),span:nth-child(5)
+		float:left;
+		margin-left:18.4%
+		text-align right
+	span:nth-child(5)
+		text-align left
+	span:nth-child(2)
+		text-align left
+
+
+.back-bar
+	width:long(572)
+	height:long(25)
+	margin-left:long(34)
+	background:#DBA600
+	border-radius: long(25)
+	position:relative
+	.flag
+		position:absolute
+		right:(-0.36)rem
+		width:long(15)
+		height:long(25)
+		background:url('./img/flag.png') no-repeat
+		background-size:contain;
+
+.my-progress
+	position:absolute
+	left:0;
+	top:0;
+	height:100%;
+	width:long(0)
+	background:-webkit-linear-gradient(left,rgba(253, 155, 0, 1),rgba(238, 3, 3, 1)) ;
+	border-radius:long(23) 0 0 long(23);
+
+
+.my-num
+	position:absolute
+	left:long(0)
+	bottom:long(-50);
+	height:long(50)
+	width:long(100)
+	margin-left:long(-50)
+	#num
+		display: block;
+		width:100%;
+		height:long(28)
+		margin-top:long(14)
+		text-align:center;
+		line-height:long(28)
+		font-style:normal
+		fontsize(18)
+		color:#6F270F
+
+.triangle
+	position:relative;
+	width:100%;
+	height:long(16)
+	display: block;
+	&:after
+		border: long(8) solid transparent;
+		border-bottom: long(16) solid rgba(255, 104, 20, 1);
+		content:''
+		display:block
+		width:0;
+		height:0;
+		position:absolute
+		left:50%
+		margin-left:long(-8)
+.bar_2
+	.back-bar
+		&:before
+			content:''
+			display:block
+			position:absolute
+			top:0;
+			left:25%
+			width:1px
+			height:long(25)
+			background:#fff;
+			z-index:9
+		&:after
+			content:''
+			display:block
+			position:absolute
+			top:0;
+			left:75%
+			width:1px
+			height:long(25)
+			background:#fff;
+	.range_middle
+		position:absolute
+		top:0;
+		left:50%
+		width:1px
+		height:long(25)
+		background:#fff;
+		z-index:9
+
+.ttt
+	font-family: PingFangSC-Regular;
+	fontsize(28);
+	color: #5086D3;
+	width long(624)
+	height long(98)
+	text-align center
+	line-height long(98)
+	margin long(71) long(15) long(15) 0
+	border-top: 2px dashed #CD9C00;
+
+.list
+	min-height:long(409)
+	position:relative
+	overflow: hidden;
+	padding-bottom:0.5rem;
+	background:#FFC81B
+	margin:long(40) long(48)
+	border-radius:long(8)
+	p
+		margin-top:long(32)
+		fontsize(32)
+		line-height:long(42)
+		color:#E81D1E;
+		text-align:center;
+		font-family: PingFangSC-Medium;
+		color: #99020F;
+	.list-wrapper
+		width:100%;
+		margin:0.7rem 0 0.3rem
+		overflow:hidden;
+		max-height:long(492)
+	.nolist
+		fontsize(28)
+		line-height:long(40)
+	ul
+		position:relative
+		z-index:10;
+		width:90%;
+		margin-left:5%
+		max-height:long(420)
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+	li
+		margin-bottom:long(41)
+		fontsize(28)
+		line-height:long(33)
+		color:#000;
+		position:relative;
+		overflow: hidden;
+		span
+			display:inline-block;
+			float:left;
+	.award
+		color:rgba(255, 51, 51, 1)
+		fontsize(28)
+		line-height(40)
+		width:20%;
+		margin-right:0
+		font-family: "HelveticaNeue", sans-serif;
+	.name
+		width:10%;
+		margin-right:6%;
+		white-space:pre;
+	.hos
+		display:inline-block;
+		width:40%;
+		margin-right:8%;
+	.time
+		float:right;
+.grassbox1
+	border-radius:long(8)
+	margin:long(39) longP(48) 0;
+	position:relative;
+	display:inline-block;
+	width:longP(654)
+	height long(778)
+	background: #FFC81B;
+
+.rule
+	margin:long(24) long(48);
+	height: auto;
+	overflow: hidden;
+	background:#F8E1F7;
+	border-radius:long(8)
+.rule-title,.lucky-title
+	margin-top:long(32)
+	fontsize(32)
+	line-height:long(42)
+	text-align:center;
+	font-family: PingFangSC-Medium;
+	color: #99020F;
+
+.rule-content
+	z-index:10
+	margin:2% 5% 7%
+	color:rgba(0,0,0,1)
+	fontsize(28)
+	p
+		line-height:long(45)
+		overflow:hidden;
+		margin-bottom:long(34)
+
+
+.right
+	position:relative
+	text-align:center;
+	margin:long(37) 0
+	fontsize(28)
+	line-height:long(42)
+	font-family: PingFangSC-Regular;
+	color: #FF9C1F;
+
+
+.rule-desc
+	position:fixed
+	background: rgba(0,0,0,0.70);
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:none;
+	.box1
+		background:#fff;
+		width:longP(600)
+		margin:50% auto;
+		padding:long(27) long(47)
+		font-size: long(28);
+		color: #000000;
+		line-height:long(32)
+		overflow-y:scroll;
+		box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.12), 0px 4px 4px 0px rgba(0,0,0,0.24);
+		border-radius:long(4);
+
+.prize
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0, 0, 0, .7)
+	z-index:999;
+	.tip-button
+		display:none;
+.prize-box
+	width:long(560);
+	height: long(553);
+	position: absolute
+	top:50%
+	left:50%
+	margin-top:long(-276.5)
+	margin-left:long(-280)
+	padding:0;
+	background:url('img/prize.png') no-repeat;
+	background-size:100%;
+
+.prize-title
+	line-height:long(120)
+	text-align:center
+	color:#fff;
+	fontsize(36)
+
+.prize-desc
+	margin-top:long(181)
+	font-size: long(36);
+	color: #F2002A;
+	line-height: long(66)
+	font-weight:bolder
+	text-align:center;
+.prize-price
+	line-height: long(66)
+	text-align:center;
+.lll
+	width 100%
+	text-align center
+	fontsize(28)
+	color: #288EFF;
+	line-height:long(66)
+	margin-top long(2)
+.prize-close
+	width:long(58)
+	height:@width
+	position:absolute
+	top:long(601)
+	left:50%
+	margin-left long(-29)
+	background:url('./img/close.png')
+	background-size:100%;
+
+.alert
+	.box
+		background-color: #fff;
+		width:80%;
+		height: auto;
+		border-radius: long(8)
+		position: absolute
+		top:50%
+		left:50%
+		margin-top:-2.9rem
+		margin-left:-40%
+		padding:0;
+		
+	.text
+		fontsize(32)
+		text-align:center
+		margin:0 long(26)
+		color:rgba(0, 0, 0, .87)
+		p   
+			display:inline-block;
+			margin:0.6rem 0;
+			line-height:0.6rem;
+	.close
+		height:1.3rem
+		line-height:@height
+		fontsize(32)
+		border-radius: 0
+		color:rgba(0, 0, 0, .87)
+		text-align:center;
+		border-top:1px solid rgba(0, 0, 0, .1)
+		padding: 0;
+.noChance
+	display block
+.box1
+	width:long(560);
+	height: long(553);
+	position: absolute
+	top:50%
+	left:50%
+	margin-top:long(-276.5)
+	margin-left:long(-280)
+	padding:0;
+	background:url('img/chance.png') no-repeat;
+	background-size:100%;
+.prize-title1
+	line-height:long(120)
+	text-align:center
+	color:#fff;
+	fontsize(36)
+
+.prize-desc1
+	margin-top:long(181)
+	font-size: long(36);
+	color: #F2002A
+	line-height: long(66)
+	font-weight:bolder
+	text-align:center;
+.lll1
+	font-family:PingFangSC-Medium;
+	fontsize(28)
+	color: #FFFFFF;
+	width long(333)
+	height long(64)
+	background: #FF1E2C;
+	border-radius: long(52);
+	text-align center
+	line-height long(64)
+	margin long(47) long(114) long(81) long(113)
+.alert
+	.box
+		background-color: #fff;
+		width:80%;
+		height: auto;
+		border-radius: long(8)
+		position: absolute
+		top:50%
+		left:50%
+		margin-top:-2.9rem
+		margin-left:-40%
+		padding:0;
+
+	.text
+		fontsize(32)
+		text-align:center
+		margin:0 long(26)
+		color:rgba(0, 0, 0, .87)
+		p
+			display:inline-block;
+			margin:0.6rem 0;
+			line-height:0.6rem;
+	.close
+		height:1.3rem
+		line-height:@height
+		fontsize(32)
+		border-radius: 0
+		color:rgba(0, 0, 0, .87)
+		text-align:center;
+		border-top:1px solid rgba(0, 0, 0, .1)
+		padding: 0;

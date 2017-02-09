@@ -1,0 +1,326 @@
+@import "compass/css3";
+@import "compass/layout";
+@import "_bianliang.scss";
+.bg-mask{
+	display:block;
+	@include stretch;
+	position: fixed;
+	background:$mask_z_index_background;
+	z-index: $mask_z_index;
+}
+
+.chouJiang{
+	display:block;
+	position:fixed;
+	top:50%;
+	left:50%;
+	@include translate(-50%,-50%);
+	z-index: $mask_z_index + 1;
+	width:$alert_width;
+	height:$alert_height;
+	// background:rgba(0,0,0,.3);
+	// @include border-radius($alert_border_radius);
+
+	.imgDan{
+		position:absolute;
+		top:56%;
+		left:50%;
+		width:$alert_jindan_width;
+		@include translate(-50%,-50%);
+		z-index:  $mask_z_index + 1;
+	}
+
+	.caiDai{
+		position:absolute;
+		top:2%;
+		left:2%;
+		width:$alert_caidai_width;
+		z-index:  $mask_z_index + 1;
+		@include rotate(180deg);
+	}
+
+	.chouJiangTishi{
+		position:absolute;
+		bottom:10%;
+		width:100%;
+		text-align:center;
+		font-family: $YaHei;
+		font-size:16px;
+		background-image:
+    	-webkit-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+		/* Opera 11.1 - 12.0 */
+		background: -o-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+		  /* Firefox 3.6 - 15 */
+		background: -moz-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+		  /* 标准的语法 */
+		background:-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+	    -webkit-background-clip: text;
+	    font-weight:bold;
+	    -webkit-text-fill-color: transparent;
+	}
+
+	.imgChuiZi{
+		position:absolute;
+		top:0;
+		right:30px;
+		width:30%;
+		z-index:  $mask_z_index + 2;
+		-moz-transform-origin: bottom right;
+		-webkit-transform-origin: bottom right;
+		transform-origin: bottom 100%;
+		@include rotate(15deg);
+		@include animation(chuizi 1.5s ease 3);
+
+		@keyframes chuizi{
+			0%{
+				@include rotate(15deg);
+			}
+
+			30%{
+				@include rotate(-25deg);
+			}
+
+			100%{
+				@include rotate(15deg);
+			}
+		}
+
+		@-webkit-keyframes chuizi{
+			0%{
+				@include rotate(15deg);
+			}
+
+			30%{
+				@include rotate(-25deg);
+			}
+
+			100%{
+				@include rotate(15deg);
+			}
+		}
+
+		@-moz-keyframes chuizi{
+			0%{
+				@include rotate(15deg);
+			}
+
+			30%{
+				@include rotate(-25deg);
+			}
+
+			100%{
+				@include rotate(15deg);
+			}
+		}
+	}
+	
+}
+
+.inputInfo{
+	visibility:hidden;
+	position:fixed;
+	top:60%;
+	left:50%;
+	@include translate(-50%,-50%);
+	z-index:  $mask_z_index + 3;
+	width:$alert_width;
+	height:$alert_height;
+	@include border-radius($alert_border_radius);
+	background:rgba(0,0,0,.4);
+	@include transition(all .5s ease);
+
+	&.active{
+		top:50%;
+		visibility:visible;
+		width:$alert_width;
+		height:$alert_height;
+	}
+
+	.inputInfoTitle{
+		font-size:24px;
+		line-height:$alert_login_titleheight;
+		height:$alert_login_titleheight;
+		margin-top:20px;
+    	width:100%;
+    	text-align:center;
+    	font-family:$YaHei;
+    	background-image:
+    	-webkit-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+		  /* Opera 11.1 - 12.0 */
+		background: -o-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+		  /* Firefox 3.6 - 15 */
+		background: -moz-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+		  /* 标准的语法 */
+		background:-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+	    -webkit-background-clip: text;
+	    font-weight:bold;
+	    -webkit-text-fill-color: transparent;
+	}
+
+	.userNameDiv{
+		left:50%;
+		@include translateX(-50%);
+		position:absolute;
+		top:$alert_login_username_top;
+		height:$alert_login_username_div_height;
+		line-height:$alert_login_username_div_height;
+		width:$alert_login_username_div_width;
+
+		label{
+			width:$alert_login_label_width;
+			font-size:14px;
+			font-family:$YaHei;
+			padding-right:$alert_login_label_padding_right;
+			color:#FCFDA0;
+		}
+
+		.nameInput{
+			width:$alert_login_input_width;
+			height:$alert_login_input_height;
+			outline:none;
+			border:none;
+			font-family:$YaHei;
+			text-indent: 5px;
+			@include border-radius(2px);
+			background:transparent;
+			border-bottom:1px solid $alert_login_input_border_bottom_color;
+			color:#fff;
+		}
+	}
+
+	.phoneDiv{
+		left:50%;
+		@include translateX(-50%);
+		position:absolute;
+		top:$alert_login_phone_top;
+		height:$alert_login_username_div_height;
+		line-height:$alert_login_username_div_height;
+		width:$alert_login_username_div_width;
+
+		label{
+			width:$alert_login_label_width;
+			font-size:14px;
+			font-family:$YaHei;
+			padding-right:$alert_login_label_padding_right;
+			color:#FCFDA0;
+		}
+
+		.phoneInput{
+			width:$alert_login_input_width;
+			height:$alert_login_input_height;
+			outline:none;
+			font-family:$YaHei;
+			border:none;
+			text-indent: 5px;
+			@include border-radius(2px);
+			background:transparent;
+			border-bottom:1px solid $alert_login_input_border_bottom_color;
+			color:#fff;
+		}
+	}
+
+	.colseLogin{
+		width:$alert_colse_width;
+		position:absolute;
+		right:$alert_colse_position;
+		top:$alert_colse_position;
+		cursor:pointer;
+	}
+
+	.submitTijiao{
+		bottom:$alert_login_submit_bottom;
+		position:absolute;
+		height:$alert_login_submit_height;
+		width:$alert_btn_get_width;
+		left:50%;
+		@include translateX(-50%);
+		border:none;
+		background:$alert_btn_get_background_color;
+		color:#fff;
+		font-size:16px;
+		font-family:$YaHei;
+		@include border-radius(2px);
+		cursor:pointer;
+		outline: none;
+
+		&:hover{
+			background:$alert_btn_get_background_hover_color;
+		}
+	}
+}
+
+.jiangPinResult{
+	visibility:hidden;
+	position:fixed;
+	top:60%;
+	left:50%;
+	@include translate(-50%,-50%);
+	z-index:  $mask_z_index + 3;
+	width:$alert_width;
+	height:$alert_height;
+	@include border-radius($alert_border_radius);
+	background:rgba(0,0,0,.4);
+	@include transition(all .5s ease);
+
+	&.active{
+		top:50%;
+		visibility:visible;
+		width:$alert_width;
+		height:$alert_height;
+	}
+
+	.gongxi{
+		top:$alert_gongxi_top;
+		height:$alert_gongxi_height;
+		position:absolute;
+		left:$alert_gongxi_img_jiangping_left;
+		@include translateX(-50%);
+	}
+
+	p{
+		top:18%;
+		width:100%;
+		position:absolute;
+		font-size: 16px;
+		color:#fff;
+		font-family:$YaHei;
+		text-align:center;
+	}
+
+	.imgJiangPin{
+		top:$alert_gongxi_img_jiangping_top;
+		position:absolute;
+		height:$alert_gongxi_img_jiangping_height;
+		left:$alert_gongxi_img_jiangping_left;
+		@include translateX(-50%);
+	}
+
+	.btn_Get{
+		bottom:$alert_btn_get_bottom;
+		position:absolute;
+		height:$alert_btn_get_height;
+		width:$alert_btn_get_width;
+		left:50%;
+		@include translateX(-50%);
+		border:none;
+		background:$alert_btn_get_background_color;
+		color:#fff;
+		font-size:16px;
+		font-family:$YaHei;
+		@include border-radius(2px);
+		cursor:pointer;
+		outline: none;
+
+		&:hover{
+			background:$alert_btn_get_background_hover_color;
+		}
+	}
+
+	.colseJiangPin{
+		width:$alert_colse_width;
+		position:absolute;
+		right:$alert_colse_position;
+		top:$alert_colse_position;
+		cursor:pointer;
+	}
+}

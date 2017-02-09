@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"/>
+<body>
+<meta charset="utf-8"/>
+<title>圣诞节祝福</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta http-equiv="Cache-Control" content="no-cache" />
+<link rel="shortcut icon" href="/Public/mobile/favicon.ico" type="image/x-icon" />
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+<script type="text/javascript" src="../lib/flexible.js?__inline"></script>
+<link rel="stylesheet" type="text/css" href="./index.styl?__inline">
+
+<body >
+
+    <div id="all">
+        <div id="header">
+            <div id="logo">
+
+                   <img src="img/logo.png">
+
+            </div>
+            <div id="word">
+                <p>祝<span id="doc"></span>医生</p>
+            </div>
+        </div>
+        <div id="content">
+            <div id="titl">
+                <p class="middle">·为您的患者送一份祝福吧·</p>
+                <p class="care">——医者的关怀是患者最好的良药——</p>
+            </div>
+            <div id="text">
+                <label for="one"><input type="radio" name="www" value="1" id="one"><span>发给付费患者</span><span id="oneSelect"></span></label>
+                <label for="two"><input type="radio" name="www" value="2" id="two"><span>发给注册患者</span><span id="twoSelect"></span></label>
+                <textarea maxlength="90" id="inword"></textarea>
+                <p id="allCont"><span id="cont">0</span>/90</p>
+                <span id="isName">[患者姓名]</span>
+                <button id="btn">发送</button>
+            </div>
+        </div>
+        <div id="contentSend">
+            <div id="titlSend">
+                <p class="middle">·为您的患者送一份祝福吧·</p>
+                <p class="end"><span>您已为患者送去了节日祝福，医者的关怀，是患者最好的良药！</span></p>
+            </div>
+        </div>
+        <div id="contentOver">
+            <div id="titlOver">
+                <p class="middle">·为您的患者送一份祝福吧·</p>
+                <img src="img/Bitmap02.png">
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="../lib/zepto.min.js"></script>
+<script type="text/javascript" src="../lib/util.js?__inline"></script>
+<script type="text/javascript" src="./index.js?__inline"></script>
+<script>
+
+    window.onload=function () {
+        var inword=document.getElementById('inword');
+        var cont=document.getElementById('cont');
+        var allCont=document.getElementById('allCont');
+        var btn=document.getElementById('btn');
+        var one=document.getElementById('one');
+        var two=document.getElementById('two');
+        var oneSelect=document.getElementById("oneSelect");
+        var twoSelect=document.getElementById("twoSelect");
+        var doc=document.getElementById('doc');
+        var content=document.getElementById('content');
+        var contentS=document.getElementById('contentSend');
+        var contentO=document.getElementById('contentOver');
+
+
+
+        var count = 5;
+        var docid;
+        var $param = $queryToJson( location.href.split('?')[1] );
+        var _activityId = $param.activityId || '';
+        var load_timer = setInterval(function() {
+
+            var getDocid = ( window.Interface && window.Interface.getDoctorId ) ? window.Interface.getDoctorId() : ( window.getDoctorId ? window.getDoctorId() : undefined );
+
+            if( getDocid ){
+                clearInterval( load_timer );
+                docid = getDocid;
+                init();
+                return false;
+            }
+
+            if( !count ){
+                clearInterval( load_timer );
+                docid =  $param.q;
+                if( !docid ){
+                    $alert('数据出错，请重新进入或升级客户端版本');
+                }else{
+                    init();
+                }
+            }
+            count--;
+
+        }, 100);
+        $.ajax({
+            'type':'GET',
+            'url':'/home/activity/getFlupActivityInfo201612?docId='+docid+'',
+            success:function (res) {
+
+                var res = eval('('+res+')');
+                console.log(res);
+                if( Number(res.code) !== 200 ){ $alert('数据出错，请重新进入');return false;}
+                var docname=res.msg.docName;
+                var status=res.msg.status;
+                var sends=res.msg.send;
+                console.log(status);
+                console.log(sends);
+                doc.innerHTML=docname;
+                var inputValue="你好，我是"+docname+"医生，感谢你一直以来对我的信任与支持，祝你和你的家人圣诞节快乐，幸福安康！";
+                inword.innerHTML=inputValue;
+                btn.dataset.Value=inword.value;
+                if(status==0){
+
+                }else if(status==1){
+
+                    if(sends==0){
+                        content.style.display='block';
+                        contentS.style.display='none';
+                        contentO.style.display='none';
+                    }else if(sends==1){
+                        content.style.display='none';
+                        contentS.style.display='block';
+                        contentO.style.display='none';
+                    }
+
+                }else if(status==2){
+                    content.style.display='none';
+                    contentS.style.display='none';
+                    contentO.style.display='block';
+                }
+            }
+        });
+
+        inword.oninput=function() {
+            var contsl=getStrLength(inword.value);
+            contsl=Math.floor(contsl/2);
+            cont.innerHTML=contsl;
+            btn.dataset.Value=inword.value;
+            if(contsl >=90){
+                allCont.style.color='#f40';
+            }else {
+                allCont.style.color='#000';
+            };
+        };
+
+        inword.onblur=function () {
+            var value1=inword.value;
+            if(value1.length==0){
+                btn.style.background='#ddd';
+
+            }else {
+                btn.style.background='#357366';
+
+            };
+        };
+
+        btn.dataset.type='1';
+        one.onclick=function () {
+            oneSelect.style.background="#357366";
+            twoSelect.style.background="#fff";
+            btn.dataset.type='1';
+        };
+        two.onclick=function () {
+            twoSelect.style.background="#357366";
+            oneSelect.style.background="#fff";
+            btn.dataset.type='2';
+        };
+
+        btn.onclick=function () {
+            var type=btn.dataset.type;
+            var word=btn.dataset.Value;
+
+           $.ajax({
+               'type':'GET',
+               'url':'/home/activity/sendFlupMsg201612?docId='+docid+'&type='+type+'&word='+word+'',
+               success:function (res) {
+                   var res = eval('('+res+')');
+                   if(res.code==200){
+                        $alert('发送成功！')
+                   }else if(res.code==400){
+                       $alert('已经发送活动信息！')
+                   }
+                   content.style.display='none';
+                   contentS.style.display='block';
+                   contentO.style.display='none';
+               }
+           })
+        };
+        function getStrLength(str) {
+            var len = str.length;
+            var reLen = 0;
+            for (var i = 0; i < len; i++) {
+                if (str.charCodeAt(i) < 27 || str.charCodeAt(i) > 126) {
+                    reLen += 2;
+                } else {
+                    reLen++;
+                }
+            }
+            return reLen;
+        };
+        var $alertDom = $('#alert');
+        var $alert = function(msg){
+            $('#alertText').text(msg);
+            $alertDom.show();
+        };
+        $('#alerTClose').bind('click',function(){
+            $alertDom.hide();
+        });
+    }
+</script>
+
+</body>
+</html>

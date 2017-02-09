@@ -1,0 +1,409 @@
+@import "compass/css3";
+@import "_bianliang.scss";
+
+body{
+	background:$body_background;
+
+	.loadingDiv{
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		background:$loading_background;
+		z-index:111111;
+
+		p{
+			color:#aaa;
+			position:absolute;
+			width:100%;
+			top:40%;
+			height: 30px;
+			text-align:center;
+			font-family: $YaHei;
+			font-size:20px;
+			font-weight:bold;
+			-webkit-background-clip:text;/*设置背景颜色应用于text的位版本上*/
+			-webkit-text-fill-color: transparent;/*将文字的颜色设置为透明*/
+			background-color:#aaa; /*设置文字的背景色*/
+			background-image: -webkit-linear-gradient(-45deg,rgba(55,55,55,0.6) 30%,#ccc 50%,rgba(55,55,55,0.6) 70%);  /*设置文字的线性渐变颜色分布*/
+			background-blend-mode: hard-light; /*css混合模式中的强光模式*/
+			background-size: 200%;
+ 		    -webkit-animation: shine 4s infinite; 
+		}
+
+		@-webkit-keyframes shine {
+
+		    from {background-position:0px;}
+
+		    to {background-position:600px;}
+
+		}
+
+		@-moz-keyframes shine {
+
+		    from {background-position:0px;}
+
+		    to {background-position:600px;}
+
+		}
+
+		@keyframes shine {
+
+		    from {background-position:0px;}
+
+		    to {background-position:600px;}
+
+		}
+
+		img{
+			bottom:10%;
+			left:51%;
+			@include translate(-50%);
+			position:absolute;
+			width:300px;
+		}
+	}
+
+	.goldContent{
+		margin:0 auto;
+		width:100%;
+		height: auto;
+
+		.headPage{
+			position:relative;
+			width:100%;
+			height: auto;
+
+			.headPage_Img{
+				width:100%;
+				height: auto;
+				display:block;
+			}
+		}
+
+		.goldEggsDiv{
+			width:100%;
+			height: auto;
+			position:relative;
+
+			.tishiChouJiang{
+				position:absolute;
+				top:25%;
+				font-size:10px;
+				width:100%;
+				text-align:center;
+				color:#FDFC80;
+				font-family:$YaHei;
+
+				span{
+					padding-left:3px;
+					text-decoration:underline;
+					cursor:pointer;
+				}
+			}
+
+			.centerPage_Img{
+				width:100%;
+				height: auto;
+				display:block;
+			}
+
+			.list_EggsDiv{
+			    position: absolute;
+			    overflow: hidden;
+			    top: 30%;
+			    left: 15%;
+			    width: 70%;
+			    height: 50%;
+				
+				div{
+				    ul{
+				    	position:absolute;
+				    	width:100%;
+				    	float:left;
+
+				    	&.jinDanUl1{
+				    		left:100%;
+				    	}
+
+				    	li{
+				    		-webkit-tap-highlight-color:rgba(255,0,0,0);
+				    		float: left;
+						    position: relative;
+						    width:$eggs_li_width;
+						    height: 100%;
+						    cursor:pointer;
+
+						    img{
+						    	width: 100%;
+						    	height: 100%;
+						    }
+				    	}
+				    }
+					
+				}
+			}
+		}
+
+		.list_Content{
+			width:100%;
+			height: auto;
+			background:$listcontent_background;
+			width:$listcontent_width;
+			padding-bottom:$listcontent_padding_bottom;
+			margin:0 auto;
+			margin-top: $listcontent_margin_top;
+			
+			.titleDiv{
+				width:100%;
+				height: auto;
+				display:block;
+				position:relative;
+				height:$listcontent_title_height;
+				overflow: hidden;
+
+				.title_Div{
+				    width: $listcontent_title_div_width;
+				    height: auto;
+				    margin: 0 auto;
+				    padding: 8px 0;
+				    z-index: 2;
+				    font-family: $YaHei;
+				    font-size: 22px;
+				    position: absolute;
+				    left: 50%;
+				    color: $listcontent_title_color_1;
+				    @include translateX(-50%);
+				    text-align: center;
+				    background: $listcontent_background;
+				   
+				    h3{
+				    	height:28px;
+				    	line-height:26px;
+				    	background-image:
+				    	-webkit-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+						  /* Opera 11.1 - 12.0 */
+						background: -o-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+						  /* Firefox 3.6 - 15 */
+						background: -moz-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+						  /* 标准的语法 */
+						background:-linear-gradient($listcontent_title_color_1 50%, $listcontent_title_color_2 100%);
+					    -webkit-background-clip: text;
+					    font-weight:bold;
+					    -webkit-text-fill-color: transparent;
+				    }
+				}
+
+				.line_1px{
+					    display: block;
+					    position: absolute;
+					    height: 1px;
+					    width: $listcontent_line_1px_width;
+					    background: $listcontent_line_1px_backgound;
+					    z-index: 1;
+					    top: 0;
+					    margin: 0 auto;
+					    left: 50%;
+					    margin-top: $listcontent_title_height / 2;
+					    @include translateX(-50%);
+				}
+			}
+
+			&.paiMingAllDiv{
+				position:relative;
+
+				.contentDiv{
+					width:100%;
+					height: auto;
+
+					.insert_Span{
+						width:$listcontent_width;
+						height:$listcontent_insert_Span_height;
+						background:$listcontent_insert_Span_backgound;
+						@include box-shadow(0 0 0 8px $listcontent_insert_Span_shadow_backgound);
+						margin:0 auto;
+						margin-top:12px;
+						
+					}
+
+					.list_PaiMing{
+						width: $listcontent_paiming_width;
+					    margin: 0 auto;
+					    /* background: -webkit-linear-gradient($listcontent_title_color_2 1%,$listcontent_title_color_1 50%); */
+					    background: linear-gradient(to bottom , $listcontent_paiming_color_1 1%, $listcontent_paiming_color_2 4%);
+					    padding:6% 4% 2% 4%;
+
+					    .list_Div{
+					    	position:relative;
+
+					    	.list_Title{
+					    		width:100%;
+					    		height:auto;
+					    		padding-bottom: 12px;
+					    		font-size:18px;
+					    		font-family: $YaHei;
+					    		overflow: hidden;
+					            white-space: nowrap;
+					            text-overflow: ellipsis;
+
+					    		span{
+					    			@include inline-block;
+					                font-size: 16px;
+					                overflow: hidden;
+					                white-space: nowrap;
+					                text-overflow: ellipsis;
+					                color: #170C0B;
+					                font-family: $YaHei;
+					                text-align:center;
+
+					                &.list_Time{
+										width:$listcontent_span_width1_list_Time;
+										text-align:left;
+					                }
+
+					                &.list_Name{
+					                	width:$listcontent_span_width2_list_Name;
+					                }
+
+					                &.list_Things{
+					                	width:$listcontent_span_width3_list_Things;
+					                }
+					    		}
+					    	}
+
+					    	.bg_Dashed{
+					    		width:100%;
+					    		height:4px;
+					    		background-image:url($listcontent_bg_Dashed);
+					    		margin:0 auto;
+					    		margin-bottom:10px;
+					    		@include scaleY(.6);
+					    	}
+
+					    	.all_List_Div{
+					    		height:$listcontent_paiming_height;
+					    		overflow:hidden;
+					    		position:relative;
+
+					    		ul{
+									width:100%;
+						    		height:auto;
+
+						    		li{
+						    			width:100%;
+							    		height:auto;
+							    		padding-bottom:5px;
+							    		font-size:14px;
+							    		font-family: $YaHei;
+							    		overflow: hidden;
+							            white-space: nowrap;
+							            text-overflow: ellipsis;
+
+							            span{
+							    			@include inline-block;
+							                font-size: 14px;
+							                overflow: hidden;
+							                white-space: nowrap;
+							                text-overflow: ellipsis;
+							                color: #170C0B;
+							                font-family: $YaHei;
+							                text-align:left;
+							                color:#6A2422;
+
+							                &.span_dateTime{
+												width:$listcontent_span_width1_list_Time;
+							                }
+
+							                &.span_userNme{
+							                	width:$listcontent_span_width2_list_Name;
+							                	text-align:center;
+							                }
+
+							                &.span_userWingName{
+							                	width:$listcontent_span_width3_list_Things;
+							                	text-align:center;
+							                	color:$listcontent_background;
+							                }
+							    		}
+						    		}
+					    		}
+					    	}
+					    }
+					}
+				}
+			}
+
+			&.rulesActivity{
+				position:relative;
+
+				.list_Rules{
+					width:$listcontent_rules_width;
+					padding:$listcontent_rules_padding;
+					margin:0 auto;
+					background:$listcontent_paiming_color_2;	
+					position:relative;
+					overflow:hidden;
+
+
+					i{
+						position:absolute;
+						
+						&.right_img{
+							top:0;
+							right:0;
+							background:url('../images/mei11.png');
+							background-size:100%;
+							width:30%;
+							height:20%;
+							background-position:top;
+							background-repeat: no-repeat;
+						}
+
+						&.left_img{
+							bottom:0;
+							left:0;
+							background:url('../images/mei2.png');
+							background-size:100%;
+							width:20%;
+							height:15%;
+							background-position:right bottom;
+							background-repeat: no-repeat;
+							z-index:0;
+						}
+					}
+
+					ul{
+						position:relative;
+						width:100%;
+						height:auto;
+
+						li{
+							font-family:$YaHei;
+							font-size:14px;
+							line-height:1.6;
+							padding-top:10px;
+
+							.color_red{
+								color:red;
+							}
+						}
+					}				
+				}
+			}
+		}
+
+		.footerImg{
+			margin-top:$listcontent_footer_margin_top;
+			z-index:3333;
+			position: relative;
+			width:100%;
+			height: auto;
+
+			img{
+				width:100%;
+				height: auto;
+			}
+		}
+	}
+}

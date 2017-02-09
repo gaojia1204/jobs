@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 20px;
+            margin: 100px auto;
+            position: relative;
+        }
+        #jin{
+            background: #f40;
+            height: 100%;
+            width: 0%;
+        }
+        #jian{
+            width: 2px;
+            height: 5px;
+            background: #000;
+            position: absolute;
+            top:-5px;
+            left: 0;
+        }
+        span{
+            font-size: 12px;
+            margin-left:15%;
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="jin"></div>
+        <div id="jian"></div>
+
+        <span>20</span>
+        <span>40</span>
+        <span>60</span>
+        <span>80</span>
+        <span>100</span>
+    </div>
+    <input type="text" id="ttt">
+    <button id="btn">提交</button>
+<script>
+    var box=document.getElementById('box');
+    var ttt=document.getElementById('ttt');
+    var jin=document.getElementById('jin');
+    var jian=document.getElementById('jian');
+    var btn=document.getElementById('btn');
+    btn.onclick=function () {
+        var text=ttt.value;
+        jin.style.width=text*10+'%';
+        jin.innerHTML=text*10+'%';
+        jian.style.left=text*10+'%';
+    }
+    var myDate = new Date(2016/12/01);
+    var aaa=myDate.getTime();
+    console.log(aaa);
+</script>
+</body>
+</html>

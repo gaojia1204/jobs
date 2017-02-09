@@ -1,0 +1,139 @@
+<html>
+<meta charset="utf-8"/>
+<body>
+	 <meta charset="utf-8"/>
+    <title>大转盘抽奖</title>
+    <link rel="icon" type="image/x-icon" href="http://www.anxinyisheng.com/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="shortcut icon" href="/Public/mobile/favicon.ico" type="image/x-icon" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+	<link rel="stylesheet" type="text/css" href="page.styl?__inline">
+
+<body >
+
+	 <div class="wrapper">
+        <div class="slogan"></div>
+         <p id="into">距离<span id="uuu">00</span>元赠送奖励入账还差<span id="iii">0</span>次有效随访</p>
+		<div class="chance">
+			<div class="awards chance-bubble">
+				<p class="title">获取关爱奖金<span id="awardsChance">00</span>次机会</p>
+			</div>
+			<div class="income chance-bubble">
+				<p class="title">已获关爱奖金<span id="awardIncomeTotal">000</span>元</p>
+			</div>
+		</div>
+         <p class="surplus">剩余抽奖机会<span id="ccc">0</span>次</p>
+
+
+		<div class="lottery">
+			<span class="carousel" id="carousel"></span>
+			<span class="pointer" id="pointer"></span>
+		</div>
+
+		<div class="shadow"></div>
+		<div id="cont">
+            <span id="rule" action-type="showDesc">点此查看活动规则</span>
+            <span id="moreChance" action-type="more">获得更多抽奖机会 </span>
+        </div>
+
+         <div class="progress grassbox">
+             <div class="grassbox-content">
+                 <p class="grassboxall-title">——   我的随访进度   ——</p>
+                 <div class="progress-step">
+                     <span class="progress-step-status" node-type="status_bar_2"></span>
+
+
+                     <div class="range_box bar_2" id="bar_2">
+                         <div id="range">
+                             <span >0</span>
+                             <span >10</span>
+                             <span >20</span>
+                             <span >30</span>
+                             <span >∞</span>
+                         </div>
+
+                         <div class="back-bar" >
+                             <span class="range_middle"></span>
+                             <span class="flag" ></span>
+                             <div class="my-progress" node-type="my_progress_box"></div>
+                             <span class="my-num" node-type="my_num_box">
+                                <i class="triangle"></i>
+                                <i id="num" node-type="mine">0</i>
+                            </span>
+                         </div>
+                         <p class="ttt">每10次有效随访，额外赠送一次抽奖机会！</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="list grassbox" >
+             <div class="grassbox-content">
+                 <p class="lucky-title">——   最新获奖名单   ——</p>
+                 <div class="list-wrapper" id="listWrapper">
+                     <ul id="list">
+
+                     </ul>
+                 </div>
+             </div>
+         </div>
+
+         <div class="grassbox1" >
+             <p class="rule-title">——   温馨提示   ——</p>
+             <div class="rule-content" id="rules">
+                 <p>1、本次活动时间:即日起至2月28日21:00</p>
+                 <p>2、每累计达到10条有效随访，额外赠送1次抽奖机会</p>
+                 <p>3、有效随访是指患者有回复的随访</p>
+                 <p>4、随访所得可在2月28日收入明细查看，并于2017年3月统一入账</p>
+                 <p>5、特别强调：一旦被确认为随访刷单，当月随访活动收入清零且不能继续参与当月随访活动</p>
+                 <p>6、温馨提示：“一键随访功能”限于安心医生app V2.8医生版本才能使用，如您没有“一键随访”功能，请及时更新</p>
+             </div>
+         </div>
+         <p class="right">——本活动最终解释归安心医生所有——</p>
+	 </div>
+     <div class="rule-desc prize">
+         <div class="box1">
+             <p>1、抽奖规则：活动期间优先赠送您1次抽奖机会(相应中奖金额累计随访到达3次才可入账)</p>
+             <p>2、每3条有效随访或每天对5位患者发起一键随访，均可获得一次抽奖机会。</p>
+             <p>a. 系统每日每位患者最多录入1次有效随访可参与抽奖。</p>
+             <p>b. 系统每月每位患者最多录入9次有效随访可参与抽奖。 </p>
+             <p>3. 每累计10次有效随访，额外赠送一次抽奖机会</p>
+         </div>
+     </div>
+     <div class="prize" id="prizeAlart">
+         <div class="prize-box" node-type="box">
+             <p class="prize-title"> 恭喜您！</p>
+             <p class="prize-desc">获得
+                 <span class="prize-price" node-type="awardName">0元 </span>
+             </p>
+             <p class="lll">—— 累计3次有效随访可入账 ——</p>
+             <div class="prize-close" node-type="close"></div>
+         </div>
+     </div>
+     <div class="alert prize" id="alert">
+         <div class="box">
+             <div class="text" ><p id="alertText" ></p></div>
+             <p class="close" id="alerTClose">确定</p>
+         </div>
+     </div>
+
+
+
+      <div class="noChance prize" id="noChance">
+          <div class="box1" node-type="box">
+              <p class="prize-title1"> 恭喜您！</p>
+              <p class="prize-desc1">获得1次抽奖机会</p>
+              <p class="lll1">我要抽奖</p>
+          </div>
+     </div>
+
+<script type="text/javascript" src="//apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+<script type="text/javascript" src="http://g.alicdn.com/mtb/??lib-flexible/0.3.2/flexible.js"></script>
+<script type="text/javascript" src="../lib/util.js?__inline"></script>
+<script type="text/javascript" src="./page.js?__inline"></script>
+
+</body>
+</html>
